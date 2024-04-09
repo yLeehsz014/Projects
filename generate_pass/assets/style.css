@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(30deg, rgba(1,18,15,1) 0%, rgba(0,51,42,1) 48%, rgba(0,117,96,1) 100%, rgba(0,169,138,1) 100%);
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+.gif img{
+    margin-left: -10rem;
+    width: 25rem;
+}
+
+main {
+    margin: 0rem 12rem 2rem 15rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: -0.5rem;
+}
+
+.title span {
+    color: #00a98a;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.title hr {
+    border: 2px solid #00a98a;
+    width: 20.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.container-pass {
+    display: flex;
+}
+
+.pass {
+    width: 23rem;
+    height: 1.2cm;
+    line-height: 1.2cm;
+    padding-left: 1rem;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#button {
+    background-color: rgba(255, 255, 255, 0.862);
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    margin-left: -2.4rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#button:hover{
+    background-color: rgb(215, 255, 254);
+    border: 1px dashed #00a98a;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 20px;
+    position: relative;
+    margin-top: 1rem;
+}
+.options span:nth-child(3){
+    color: white;
+    font-weight: 100;
+}
+.options input {
+    display: none;
+}
+
+.options label:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    margin-top: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.5px 0.5px 0.5px 1px #00a98a;
+    transition: all 0.1s ease-in-out;
+}
+
+.options input:checked+label:before {
+    background-image: url(./img/checked.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #00a98a;
+    box-shadow: 0.2px 0.2px 0.2px 0.2px #000000;
+}
+
+label {
+    margin: 0.2rem;
+}
+
+.firstTitle {
+    margin-left: 1.5rem;
+    color: #00a98a;
+}
+
+input,label{
+    cursor: pointer;
+}
+#range {
+    margin-top: 1rem;
+    -webkit-appearance: none;
+    background: #ffffff;
+    outline: none;
+    width: 23rem;
+    height: 0.2rem;
+    border-radius: 1px;   
+}
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px; 
+    background: #00a98a;
+    cursor: pointer;
+}
+  
+
+.msg p{
+    margin-top: 0.5rem;
+    font-size: 20px;
+    margin-bottom: -0.5rem;
+    color: #00a98a;
+}
+#qt{
+    color: white;
+}
+#button2{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    margin: 1rem 0rem 0rem 0.9rem;
+    width: 20rem;
+    padding-left: 5rem;
+    font-weight: 200;
+    color: white;
+    background-color: #008a71;
+    border-radius:5px;
+    transition: all 0.2s ease;
+    font-size: 20px;
+}
+#button2:hover{
+    letter-spacing: 1px;
+    background-color: #00a98a6f;
+    
+}
+#button2:hover .fa-sharp {
+    transform: translateY(-0.2px) scale(1.2);
+}
+.icon-bolt{
+    position: absolute;
+    left: 0;
+    margin-left: 2rem;
+}

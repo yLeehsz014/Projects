@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random pass generator</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css">
+    <link rel="shortcut icon" href="./assets/img/password.png" type="image/x-icon">
+ 
+</head>
+
+<body>
+    <main>
+        <div class="title">
+            <h1>Generate a</h1>
+            <span>Random Password</span>
+            <hr>
+        </div>
+
+        <div class="container-pass">
+            <div class="pass"></div><button onclick="pastePass()" id="button"><i class="fa-regular fa-paste" style="color: #00a98a;"></i></button>
+        </div>
+        <div class="options">
+            <input type="radio" name="char" id="char">
+            <label for="char"><span class="firstTitle">Char</span><span class="details"> (alphabet A-Z, number(1-9))</span></label>
+            <input type="radio" name="char" id="allchar" checked>
+            <label for="allchar"><span class="firstTitle">All char</span><span class="details"> (Alphabet,number and simbols)</span></label>
+        </div>
+        <div class="slider">
+            <div class="msg">
+                <p>Password with <span id="qt"> </span> chars</span> caracteres</p>
+            </div>
+            <input type="range" name="txtcarac" id="range" max="20" min="8" value="15">
+        </div>
+        <button onclick="generatePass()" id="button2"><i class="fa-sharp fa-solid fa-bolt icon-bolt" style="color: #ffffff;"></i>Generate password</button>
+       
+    </main>
+     <div class="gif">
+        <img src="./assets/img/animation_.svg" alt="password - gif" title="password's ilustration">
+    </div> 
+</body>
+<script src="./assets/script.js"></script>
+
+
+</html>
