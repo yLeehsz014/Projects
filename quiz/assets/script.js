@@ -48,7 +48,7 @@ const questions = [
 ]
 
 const questionElement = document.querySelector('#question')
-const buttonElement = document.getElementById('answer-button')
+const buttonElement = document.getElementById('answer-buttons')
 const nextbtn = document.querySelector('#next-btn')
 let i = 0;
 let score = 0;
@@ -59,16 +59,21 @@ function startQuiz() {
     showQuestion()
 }
 
-function showQuestion(){
-    
+function showQuestion() {
     let currentQuestion = questions[i];
-    let numberQuestion = i+1;
-    questionElement.innerHTML = numberQuestion+" - "+ currentQuestion.question;
+    let numberQuestion = i + 1;
+    questionElement.innerHTML = numberQuestion + " - " + currentQuestion.question;
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
         buttonElement.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct  = answer.correct;
+        }
+        button.addEventListener('click',selectAnswer);
     });
-} 
+
+}
+
 startQuiz();

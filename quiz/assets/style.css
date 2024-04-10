@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --purple: #310E39;
+    --purple: #16002a;
 }
 
 * {
@@ -14,14 +14,16 @@
 
 body {
     height: 100vh;
-    background-color: var(--purple);
+    background-image: url(https://cdn-cf-east.streamable.com/image/3nfag.jpg?Expires=1711208880&Signature=OrJUbyGtVlhwAgZM1ZqWyxDDH-QmK7JY61SbmT~iFp11tYZwqJR~kuAH4wCilGZmtA7v7no48Z8yZ2Jv9OtmiMcxeCT9j-Gk7blNGR-K7Su7rNHsJ03QGWvKWyI7W8GhJCRpXFda5ATaEzHjfH-W8xSuwp7wjf4Pt3YyiyUbZOKpSRjMLpnwkKRQz41C5fHFRW3WJZ4XZ0fQ8owHEze1LYiqdHzamq4D-hRvEBx-Mt3J~dtqQ67EPV~gFAtDNtg4Oec8V-qs~ncoWe2iH5l6~IRN24W8AkZA3wGM64ctecV62lJalCqYBgC0PxeyuCEDBLrN5pq5xnMDU7-rXQR5rA__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .app {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.516);
     max-height: 24rem;
     padding-bottom: 1.5rem;
     width: 35rem;
@@ -30,14 +32,15 @@ body {
 
 .app h1 {
     margin: 2rem 0rem 1rem 2rem;
-    font-weight: 500;
+    font-weight: 800;
     position: relative;
+
 }
 
 .app h1::after {
     content: "";
     position: absolute;
-    height: 1.5px;
+    height: 2px;
     width: 30rem;
     background-color: var(--purple);
     top: 0;
@@ -47,7 +50,7 @@ body {
 
 #question {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .quiz {
@@ -60,26 +63,28 @@ body {
 }
 
 .btn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.543);
     color: var(--purple);
-    box-shadow: rgba(36, 0, 55, 0.097) 0px 7px 17px, rgba(23, 0, 51, 0.074) 0px 4px 4px;
+    box-shadow: 0 25px 50px -12px rgba(29, 0, 49, 0.637);
     margin-top: 0.5rem;
     width: 30rem;
     padding: 0.7rem 1rem;
-    font-weight: 800;
+    font-weight: 600;
     text-align: left;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    border: 1px solid rgba(58, 0, 58, 0.172);
+    border: 1px solid rgba(58, 0, 58, 0.397);
+    border-radius: 8px;
 }
 .btn:hover{
-    background-color: var(--purple);
+    background-color: #130047c7;
     color: white;
 }
 .align{
     display: flex;
     width: 30rem;
     justify-content: center;
+    text-align: center;
 }
 #next-btn{
     margin-top: 1.5rem;
@@ -88,8 +93,7 @@ body {
     width: 10rem;
     padding: 0.5rem;
     border: none;
-    cursor: pointer;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;    
+    cursor: pointer; 
     font-weight: 400;
     transition: all 0.3s ease-in-out;
     display: none;
