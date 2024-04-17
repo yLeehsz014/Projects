@@ -49,8 +49,7 @@ body {
 }
 
 img {
-    width: 9.5rem;
-    height: 20rem;
+    height: 11rem;
     border-radius: 100%;
     box-shadow: 3px 1px 3px 3px rgba(173, 0, 0, 0.57);
 }

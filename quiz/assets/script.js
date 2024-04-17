@@ -60,6 +60,7 @@ function startQuiz() {
 }
 
 function showQuestion() {
+    resetState();
     let currentQuestion = questions[i];
     let numberQuestion = i + 1;
     questionElement.innerHTML = numberQuestion + " - " + currentQuestion.question;
@@ -75,5 +76,47 @@ function showQuestion() {
     });
 
 }
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add('correct');
+    }else{
+        selectedBtn.classList.add('incorrect');
+    }
+    Array.from(buttonElement.children).forEach(button => {
+        if(button.dataset.correct == "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextbtn.style.display = "block";
+}
 
+function resetState(){
+    nextbtn.style.display = "none";
+    while(buttonElement.firstChild){
+        buttonElement.removeChild(buttonElement.firstChild);
+    }
+}
+
+
+// function showScore(){
+
+// }
+// function handleNextBtn(){
+//     i++;
+//     if(i < questions.length){
+//         showQuestion();
+//     }else{
+//         showScore();
+//     }
+// }
+// nextbtn.addEventListener('click',()=>{
+//     if(i< questions.length){
+//         handleNextBtn();
+//     }else{
+//         startQuiz();
+//     }
+// });
 startQuiz();

@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .app {
@@ -76,9 +77,12 @@ body {
     border: 1px solid rgba(58, 0, 58, 0.397);
     border-radius: 8px;
 }
-.btn:hover{
+.btn:hover:not([disabled]){
     background-color: #130047c7;
     color: white;
+}
+.btn:disabled{
+    cursor: no-drop;
 }
 .align{
     display: flex;
@@ -100,4 +104,31 @@ body {
 }
 #next-btn:hover{
     letter-spacing: 1px;
+}
+.correct{
+    background-color: #33038b;
+    color: white;
+}
+.incorrect{
+    background-color: #d71b2e;
+    color: white;
+}
+footer{
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.446);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+h3{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+span:nth-child(1){
+    color: blue;
+}
+span:nth-child(2){
+    color: red;
 }
