@@ -26,6 +26,10 @@ body {
     border-radius: 0.5rem;
     width: 25rem;
     min-height: 1rem;
+    padding-bottom: 0.5rem;
+}
+.container p {
+    text-align: center;
 }
 
 h2 {
@@ -61,18 +65,16 @@ h2 {
 
 ul li {
     list-style: none;
-    margin: 0.5rem 3rem;
+    margin: 1rem 3rem;
     font-weight: 600;
     font-size: 15px;
     color: var(--darkred);
     letter-spacing: 0.8px;
     height: auto;
-
 }
 
 .tasks-list {
     position: relative;
-
 }
 
 ul li::before {
