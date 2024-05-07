@@ -70,7 +70,6 @@ body{
     height: 0.1rem;
     margin-top: 0.5rem;
     border-radius: 1px;
-    animation: appear 2s ease-in-out;
     animation: line_mov 2s ease-in-out forwards ;
 }
 
