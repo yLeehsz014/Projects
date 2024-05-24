@@ -11,10 +11,39 @@
 <body>
     <div id="left">
         <h1>GENERATE YOUR QR CODE</h1>
-        <img src="./assets/image.png" alt="ilustration qr-code" title="woman having access to the QR code.">
+        <img src="./assets/img/image.png" alt="ilustration qr-code" title="woman having access to the QR code.">
     </div>
     <div id="right">
-
+        <nav></nav>
+        <div class="container">
+            <div class="title">
+                <h1>Select the QR CODE content type:</h1>
+            </div>
+            <div class="boxContainer one">
+                <div class="box one">
+                    <div class="one img" id="add1"></div>
+                    <img src="./assets/img/website.png" alt="" class="one">
+                    <p class="one">Website</p>
+                </div>
+                <div class="box two">
+                    <div class="two" id="add2"></div>
+                    <img src="./assets/img/text.png" alt="" class="two">
+                    <p class="two">Text</p>
+                </div>
+            </div>
+            <div class="generate">
+                <p>Enter your <span id="type">URL</span></p>
+                <input type="text" name="" id="txt_in" placeholder="Your URL here">
+                <div id="qrCodeContainer">
+                    
+                </div>
+                <p id="loadingMessage" style="text-align: center; display: none;">Loading...</p>
+                <div class="generate-button">
+                    <input type="button" value="Generate" id="btn_in">
+                </div>
+            </div>
+          
+        </div>
     </div>
 </body>
 <script src="./assets/script.js"></script>
