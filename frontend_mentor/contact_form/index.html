@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: 'Karla';
+      src: url('assets/fonts/Karla-VariableFont_wght.ttf');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Karla', sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background-color: hsl(148, 38%, 91%);
+    }
+
+    .form {
+      position: relative;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      background-color: white;
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .containerBox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .title h1 {
+      font-weight: 700;
+      font-size: 25px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    span {
+      color: hsl(169, 82%, 27%);
+    }
+
+    .box {
+      margin-top: 1rem;
+    }
+
+
+    .inputBox {
+      display: flex;
+      gap: 1rem;
+      margin: 0.5rem 0.5rem 1rem 0rem;
+      outline: 1px solid hsl(186, 15%, 59%);
+      outline-offset: 2px;
+      border-radius: 2px;
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    #ig,
+    #is {
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .inputBox input.act:focus,
+    .inputBox input.act:active {
+      background-color: hsl(0, 100%, 50%);
+      /* Cor de fundo vermelha para o input ativo */
+      outline: none;
+    }
+
+    .inputBox.act {
+      background-color: hsl(0, 100%, 50%);
+      /* Cor de fundo vermelha para o inputBox ativo */
+    }
+
+
+
+    #msg {
+      margin: 0.5rem 0rem 0.5rem 0rem;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid hsl(186, 15%, 59%);
+      height: 4rem;
+      resize: none;
+      padding: 0.5rem;
+    }
+
+    #checkb {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin: 1rem 0rem 0rem 0rem;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: hsl(169, 82%, 27%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: hsl(169, 79%, 15%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .error {
+      display: none;
+      position: absolute;
+      color: hsl(0, 66%, 54%);
+    }
+
+    .box:nth-of-type(1) .error,
+    .box:nth-of-type(2) .error {
+      top: 10rem;
+    }
+
+    .box:nth-of-type(3) .error {
+      top: 16rem;
+    }
+
+    .box:nth-of-type(4) .error {
+      top: 22rem;
+    }
+
+    .box:nth-of-type(5) .error {
+      top: 29.5rem;
+    }
+
+    .box:nth-of-type(6) .error {
+      top: 32.5rem;
+    }
+
+    #fname,
+    #lname {
+      margin: 0.5rem 0rem 1rem 0rem;
+      border-radius: 5px;
+      border: 1px solid hsl(186, 15%, 59%);
+      height: 2.5rem;
+      width: 16rem;
+    }
+
+    #adress {
+      margin: 0.5rem 0rem 1rem 0rem;
+      border-radius: 5px;
+      border: 1px solid hsl(186, 15%, 59%);
+      height: 2.5rem;
+      width: 100%;
+    }
+
+    #fname:focus,
+    #lname:focus,
+    #adress:focus,
+    #msg:focus {
+      border: 1px solid hsl(169, 82%, 27%);
+      outline: none;
+    }
+
+    .act:active {
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form">
+
+    <div class="title">
+      <h1>Contact us</h1>
+    </div>
+
+    <div class="containerBox">
+      <div class="box">
+        <p>First Name <span>*</span></p>
+        <input type="text" name="txtname" id="fname" required class="foc">
+        <div class="error">
+          This field is required
+        </div>
+      </div>
+      <div class="box">
+        <p>Last Name <span>*</span></p>
+        <input type="text" name="txtname" id="lname" required class="foc">
+        <div class="error">
+          This field is required
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <p> Email Address <span>*</span></p>
+      <input type="text" name="txtadd" id="adress" required class="foc">
+      <div class="error">
+        Please enter a valid email adress
+      </div>
+    </div>
+
+    <div class="box">
+      <p>Query Type <span>*</span></p>
+      <div class="containerBox">
+        <div class="inputBox"><label tabindex="0"><input type="radio" name="type" id="ig" required class="act">
+            General Enquiry
+        </div></label>
+        <div class="inputBox"><label tabindex="0"><input type="radio" name="type" id="is" required class="act"> Support
+            Request
+        </div></label>
+      </div>
+      <div class="error">
+        Please select a query type
+      </div>
+    </div>
+    <div class="box">
+      <p>Message *</p>
+      <textarea id="msg"></textarea>
+      <div class="error">
+        This field is required
+      </div>
+    </div>
+
+    <div class="box">
+      <label>
+        <input type="checkbox" name="check" id="checkb" class="foc">
+        I consent to being contacted by the team *
+      </label>
+      <div class="error">
+        To submit this form, please consent to being contacted
+      </div>
+    </div>
+
+    <div class="box">
+      <button id="btn">Submit</button>
+
+    </div>
+
+    <!-- Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Lethícia Almeida</a>.
+  </div>
+
+  <script src="./assets/script.js"></script>
+</body>
+
+</html>
